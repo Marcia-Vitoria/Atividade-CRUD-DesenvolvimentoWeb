@@ -1,6 +1,6 @@
 # 🛒 Supermercado - CRUD com Flask e SQLite
 
-Este projeto é uma aplicação web simples de um supermercado, desenvolvida em Python utilizando Flask e SQLite. Ele implementa o CRUD completo (Create, Read, Update, Delete) para produtos e categorias, permitindo gerenciar os itens do mercado e suas categorias correspondentes.
+Este projeto é uma aplicação web simples de um supermercado, desenvolvida em Python utilizando Flask e SQLite, além de HTML, CSS e Jinja. Ele implementa o CRUD completo (Create, Read, Update, Delete) para produtos e categorias, permitindo gerenciar os itens do mercado e suas categorias correspondentes.
 
 ---
 
@@ -96,6 +96,7 @@ python run.py
 
 #### Passo 5 – Acessar no navegador
 
+* Home: `http://127.0.0.1:5000/`
 * Lista de categorias: `http://127.0.0.1:5000/categorias`
 * Lista de produtos: `http://127.0.0.1:5000/produtos`
 
