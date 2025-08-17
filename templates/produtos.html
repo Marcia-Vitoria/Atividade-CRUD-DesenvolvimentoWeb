@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Produtos</h1>
+<a href="{{ url_for('novo_produto') }}">Novo Produto</a>
+<ul>
+    {% for p in produtos %}
+    <li>{{ p.nome }} - R$ {{ p.preco }} ({{ p.categoria or 'Sem categoria' }})
+        <a href="{{ url_for('editar_produto', id=p.id) }}">Editar</a>
+        <a href="{{ url_for('excluir_produto', id=p.id) }}">Excluir</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

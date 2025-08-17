@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>{{ categoria and 'Editar Categoria' or 'Nova Categoria' }}</h1>
+<form method="post">
+    Nome: <input type="text" name="nome" value="{{ categoria.nome if categoria else '' }}">
+    Descrição: <input type="text" name="descricao" value="{{ categoria.descricao if categoria else '' }}">
+    Corredor: <input type="text" name="corredor" value="{{ categoria.corredor if categoria else '' }}">
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}

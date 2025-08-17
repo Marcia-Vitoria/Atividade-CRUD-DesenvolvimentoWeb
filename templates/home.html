@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bem-vindo ao Supermercado!</h1>
+    <p>Registre produtos e categorias para manter seu mercado organizado e atualizado.</p>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('listar_produtos') }}">Entrar</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

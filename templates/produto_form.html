@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>{{ produto and 'Editar Produto' or 'Novo Produto' }}</h1>
+<form method="post">
+    Nome: <input type="text" name="nome" value="{{ produto.nome if produto else '' }}">
+    Preço: <input type="text" name="preco" value="{{ produto.preco if produto else '' }}">
+    Categoria:
+    <select name="categoria_id">
+        <option value="">Sem categoria</option>
+        {% for c in categorias %}
+            <option value="{{ c.id }}" {% if produto and produto.categoria_id == c.id %}selected{% endif %}>{{ c.nome }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
